@@ -1,5 +1,7 @@
 # Neovim-Nix
 
+set as default nvim using **nix profile install .***
+
 ## With flakes 
 
 ```nix
@@ -7,7 +9,6 @@
 nix run .
 nix develop
 nix build .
-```
 
 
 ## Without flakes 

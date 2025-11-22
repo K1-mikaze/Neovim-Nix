@@ -18,6 +18,7 @@ let
 
   startPlugins = [
     vimPlugins.harpoon2
+    vimPlugins.rustaceanvim
     vimPlugins.luasnip
     vimPlugins.nvim-autopairs
     vimPlugins.telescope-nvim
@@ -29,7 +30,7 @@ let
     vimPlugins.cmp-nvim-lsp
     vimPlugins.cmp-path
     vimPlugins.lspkind-nvim
-    configuration       # Your config must be in start to set up lz
+    configuration       
   ];
 
 
