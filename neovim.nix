@@ -17,7 +17,9 @@ let
   packageName = "custom";
 
   startPlugins = [
+
     vimPlugins.rustaceanvim
+    vimPlugins.markdown-preview-nvim
     vimPlugins.luasnip
     vimPlugins.friendly-snippets
     vimPlugins.nvim-autopairs

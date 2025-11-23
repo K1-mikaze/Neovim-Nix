@@ -6,6 +6,7 @@ function M.setup()
   require('plugins.cmp')
   require('plugins.autopairs')
   require('plugins.luasnip')
+  require('plugins.markdown-preview')
 
 end
 
