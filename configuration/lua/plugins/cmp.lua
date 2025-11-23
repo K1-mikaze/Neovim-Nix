@@ -1,7 +1,6 @@
+vim.cmd("hi Pmenu guibg=#282923")
 local cmp = require'cmp'
 local lspkind = require('lspkind')
-
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -16,10 +15,8 @@ performance = {
   formatting = {
       format = lspkind.cmp_format({
         mode = 'symbol_text', -- show only symbol and text
-        maxwidth = 50, -- prevent the popup from showing more than provided characters
+        maxwidth = 50,
         ellipsis_char = '...', -- when popup menu exceed maxwidth
-        
-        -- The function below will be called before any actual modifications from lspkind
         before = function(entry, vim_item)
           return vim_item
         end
@@ -33,15 +30,17 @@ performance = {
   window = {
 completion = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      scrollbar = true,
-      max_width = 80,
-      max_height = 20,
+      -- winhighlight = "Normal:CmpNormal",
+      -- scrollbar = true,
+      -- max_width = 80,
+      -- max_height = 20,
     },
  documentation = {
+      -- winhighlight = "Normal:CmpNormal",
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      scrollbar = true,
-      max_width = 80,
-      max_height = 15,
+      -- scrollbar = true,
+      -- max_width = 80,
+      -- max_height = 15,
     },
   },
   mapping = cmp.mapping.preset.insert({
@@ -49,11 +48,13 @@ completion = {
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
+    ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true,behavior = cmp.ConfirmBehavior.Replace}),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp', max_item_count = 20 },
-    { name = 'luasnip', max_item_count = 10}, -- For vsnip users.
-  -- }, {
+    { name = 'luasnip' },
     { name = 'path',max_item_count = 5},
   })
 })

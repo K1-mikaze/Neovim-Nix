@@ -1,5 +1,3 @@
-local luasnip = require('luasnip')
-local fs = require('luasnip.loaders.from_vscode')
+require("luasnip")
+require("luasnip.loaders.from_vscode").lazy_load()
 
--- Load friendly-snippets
-fs.lazy_load()

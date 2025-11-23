@@ -28,20 +28,26 @@
       };
     };
 
+
+    devShells.${system}.default = pkgs.mkShell {
+      buildInputs = [
+      self.packages.${system}.default
+      pkgs.lua-language-server
+      pkgs.nixd
+      pkgs.alejandra
+      ];
+    };
+
     meta = {
-      description = ''                === My custom Neovim configuration ===
-                    Build:
+      description = ''                
+      === My custom Neovim configuration ===
+      Build:
         - nix run .
         - nix build .
         - nix develop
       '';
       # license = pkgs.lib.licenses.mit;  # Optional: add license
       # maintainers = [ /* your info */ ]; # Optional: add maintainers
-    };
-
-    # Development shell
-    devShells.${system}.default = pkgs.mkShell {
-      buildInputs = [self.packages.${system}.default];
     };
   };
 }

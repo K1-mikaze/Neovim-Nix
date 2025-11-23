@@ -17,9 +17,9 @@ let
   packageName = "custom";
 
   startPlugins = [
-    vimPlugins.harpoon2
     vimPlugins.rustaceanvim
     vimPlugins.luasnip
+    vimPlugins.friendly-snippets
     vimPlugins.nvim-autopairs
     vimPlugins.telescope-nvim
     vimPlugins.plenary-nvim
@@ -28,6 +28,7 @@ let
     vimPlugins.nvim-lspconfig
     vimPlugins.nvim-cmp
     vimPlugins.cmp-nvim-lsp
+    vimPlugins.cmp_luasnip
     vimPlugins.cmp-path
     vimPlugins.lspkind-nvim
     configuration       
