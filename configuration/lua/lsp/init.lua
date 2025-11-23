@@ -39,6 +39,7 @@ local servers = {
   'taplo',        -- TOML
   'vimls',        -- Vim script
   'cssls',
+  'marksman'
 }
 
 for _, lsp in ipairs(servers) do
