@@ -6,7 +6,6 @@ local keymap = vim.keymap.set
 
 -- Navigation
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', { desc = 'Find files' })
-keymap('n', '<Tab>', ':marks<CR>')
 keymap('n', '<leader>fa', ':Telescope live_grep theme=dropdown<CR>', { desc = 'Live grep' })
 keymap('n', '<leader>fi', "<cmd>:lua require'telescope.builtin'.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({}))<CR>", { desc = 'Live grep in Current file' })
 keymap('n', '<leader>fh', ':Telescope help_tags', { desc = 'Fuzzy search Documentation' })

@@ -32,6 +32,7 @@ let
     vimPlugins.cmp_luasnip
     vimPlugins.cmp-path
     vimPlugins.lspkind-nvim
+    vimPlugins.nvim-jdtls
     configuration       
   ];
 
