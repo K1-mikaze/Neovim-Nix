@@ -14,6 +14,7 @@ vim.cmd('set conceallevel=2')
 vim.cmd('set wildmenu')
 vim.cmd('let g:netrw_liststyle=3')
 vim.cmd('set path+=**')
+vim.cmd('set colorcolumn=140')
 
 local config = {
   virtual_text = true,

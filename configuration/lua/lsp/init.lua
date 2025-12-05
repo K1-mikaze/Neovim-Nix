@@ -9,6 +9,7 @@ function M.setup()
   require('lsp.python')
   require('lsp.nix')
   require('lsp.java')
+  require('lsp.markdown')
 
 vim.lsp.config('*', {
   root_markers = { '.git' },

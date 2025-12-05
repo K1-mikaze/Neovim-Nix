@@ -19,6 +19,7 @@ keymap('n', '<leader>cq',  "<cmd>:lua require'telescope.builtin'.quickfix(requir
 keymap('n', '<leader>cs',  "<cmd>:lua vim.diagnostic.open_float()<CR>", { desc = 'Show whole Code warning/error/suggestion' })
 keymap('n', '<leader>cd',  "<cmd>:lua require('telescope.builtin').lsp_definitions(require('telescope.themes').get_cursor({}))<CR>", { desc = 'Code Definitions' })
 keymap('n', '<leader>ci',  "<cmd>:lua require('telescope.builtin').lsp_implementations(require('telescope.themes').get_cursor({}))<CR>", { desc = 'Code Definitions' })
+keymap('n', '<leader>cf',  "<cmd>:lua vim.lsp.buf.format()<CR>", { desc = 'Code Formater' })
 
 -- Debug
 keymap('n', '<F5>', function() require('dap').continue() end)

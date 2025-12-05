@@ -18,6 +18,7 @@ To build it use `nix-build .`
 ``` 
 
 Remove the input of the file neovim.nix called configuration and replace the function the lines below inside the neovim.nix file
+
 ```nix 
 neovim.nix 
 {
@@ -36,4 +37,3 @@ neovim.nix
     cp -r ${./configuration}/* $out/
   '';
 ``` 
-```
