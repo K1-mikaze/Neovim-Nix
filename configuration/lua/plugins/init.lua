@@ -6,7 +6,6 @@ function M.setup()
   require('plugins.cmp')
   require('plugins.luasnip')
   require('plugins.markdown-preview')
-  require('plugins.obsidian')
   require('plugins.tmux')
 end
 
