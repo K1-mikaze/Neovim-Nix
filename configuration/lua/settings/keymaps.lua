@@ -3,7 +3,6 @@ vim.g.maplocalleader = ' '
 
 local keymap = vim.keymap.set
 
-
 -- Navigation
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', { desc = 'Find files' })
 keymap('n', '<leader>fa', ':Telescope live_grep theme=dropdown<CR>', { desc = 'Live grep' })
@@ -29,7 +28,6 @@ keymap('n', '<F12>', function() require('dap').step_out() end)
 keymap('n', '<leader>cb', function() require('dap').toggle_breakpoint() end)
 keymap('n', '<leader>cD', function() require('dapui').toggle() end)
 
-
 -- Git
 keymap('n', '<leader>glb',  "<cmd>:Gitsigns toggle_current_line_blame<CR>", { desc = 'Toggle Line blames' })
 keymap('n', '<leader>gb',  "<cmd>:Git blame<CR>", { desc = 'Open Git Blames' })
@@ -42,16 +40,14 @@ keymap('i', '{',  '{}<left>')
 keymap('i', '[',  '[]<left>')
 keymap('i', '/*',  '/**/<left><left>')
 
-
 -- Obsidian
 keymap("n", "<leader>nfa", "<cmd>Obsidian search<CR>", { desc = "Search notes" })
 keymap("n", "<leader>nff", "<cmd>Obsidian quick_switch<CR>", { desc = "Quick switch notes" })
 keymap("n", "<leader>nft", "<cmd>Obsidian tags<CR>", { desc = "Search about all the Tags available" })
 
-
 -- Others
 keymap('n', '<C-s>', ':w<CR>', { desc = 'Save File' })
-keymap('n', '<M-1>', ':Ex<CR>', { desc = 'Open Explorer' })
+keymap('n', '<F1>', ':Ex<CR>', { desc = 'Open Explorer' })
 keymap('n', '<leader>olae', '<cmd>setlocal spell spelllang=en<CR>', { desc = 'Active  Language Spell Checker to English' })
 keymap('n', '<leader>olas', '<cmd>setlocal spell spelllang=es<CR>', { desc = 'Active  Language Spell Checker to Spanish' })
 keymap('v', '<leader>r', "\"hy:%s/<C-r>h//g<left><left>",{ desc = "rename a variable or whatever"})
