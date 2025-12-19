@@ -34,6 +34,8 @@
         pkgs.lua-language-server
         pkgs.nixd
         pkgs.alejandra
+        pkgs.stylua
+        pkgs.nix
       ];
     };
 

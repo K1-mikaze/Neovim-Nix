@@ -4,16 +4,15 @@ To build this package use:
 - nix-build
 https://ayats.org/blog/neovim-wrapper
 */
-{ lib
-, symlinkJoin
-, neovim-unwrapped
-, makeWrapper
-, runCommandLocal
-, vimPlugins
-, configuration
-}:
-
-let
+{
+  lib,
+  symlinkJoin,
+  neovim-unwrapped,
+  makeWrapper,
+  runCommandLocal,
+  vimPlugins,
+  configuration,
+}: let
   packageName = "custom";
 
   startPlugins = [
@@ -38,11 +37,12 @@ let
     vimPlugins.tmux-nvim
     vimPlugins.nvim-dap
     vimPlugins.nvim-dap-ui
-    configuration       
+    vimPlugins.conform-nvim
+    vimPlugins.nvim-lint
+    configuration
   ];
 
-
-foldPlugins = builtins.foldl' (
+  foldPlugins = builtins.foldl' (
     acc: next:
       acc
       ++ [
@@ -63,18 +63,16 @@ foldPlugins = builtins.foldl' (
       startPluginsWithDeps
     }
   '';
-
 in
-
-symlinkJoin {
-  name = "neovim-custom";
-  paths = [neovim-unwrapped];
-  nativeBuildInputs = [makeWrapper];
-  postBuild = ''
-    wrapProgram $out/bin/nvim \
-      --add-flags '-u NORC' \
-      --add-flags '--cmd' \
-      --add-flags "'set packpath^=${packpath} | set runtimepath^=${packpath}'" \
-      --set-default NVIM_APPNAME nvim-custom
-  '';
-}
+  symlinkJoin {
+    name = "neovim-custom";
+    paths = [neovim-unwrapped];
+    nativeBuildInputs = [makeWrapper];
+    postBuild = ''
+      wrapProgram $out/bin/nvim \
+        --add-flags '-u NORC' \
+        --add-flags '--cmd' \
+        --add-flags "'set packpath^=${packpath} | set runtimepath^=${packpath}'" \
+        --set-default NVIM_APPNAME nvim-custom
+    '';
+  }
