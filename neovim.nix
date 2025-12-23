@@ -33,7 +33,6 @@ https://ayats.org/blog/neovim-wrapper
     vimPlugins.lspkind-nvim
     vimPlugins.nvim-jdtls
     vimPlugins.catppuccin-nvim
-    vimPlugins.obsidian-nvim
     vimPlugins.tmux-nvim
     vimPlugins.nvim-dap
     vimPlugins.nvim-dap-ui

@@ -91,6 +91,7 @@ keymap("i", "[", "[]<left>")
 keymap("i", "/*", "/**/<left><left>")
 
 -- DataBase
+keymap("n", "<leader>dt", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar"})
 
 -- Others
 keymap("n", "<C-s>", ":w<CR>", { desc = "Save File" })
