@@ -7,6 +7,7 @@ function M.setup()
 	require("plugins.luasnip")
 	require("plugins.markdown-preview")
 	require("plugins.tmux")
+	require("plugins.telescope")
 end
 
 M.setup()

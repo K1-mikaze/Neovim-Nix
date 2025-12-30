@@ -40,6 +40,8 @@ https://ayats.org/blog/neovim-wrapper
     vimPlugins.nvim-lint
     vimPlugins.vim-dadbod-ui
     vimPlugins.vim-dadbod
+    vimPlugins.lazygit-nvim
+
     configuration
   ];
 

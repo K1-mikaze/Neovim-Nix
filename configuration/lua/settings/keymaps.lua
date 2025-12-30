@@ -81,19 +81,21 @@ end)
 
 -- Git
 keymap("n", "<leader>glb", "<cmd>:Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle Line blames" })
+keymap("n", "<leader>gg", "<cmd>:LazyGit<CR>", { desc = "Toggle LazyGit UI" })
 keymap("n", "<leader>gb", "<cmd>:Git blame<CR>", { desc = "Open Git Blames" })
 
-keymap("i", "'", "''<left>")
-keymap("i", '"', '""<left>')
-keymap("i", "(", "()<left>")
-keymap("i", "{", "{}<left>")
-keymap("i", "[", "[]<left>")
-keymap("i", "/*", "/**/<left><left>")
 
 -- DataBase
 keymap("n", "<leader>dt", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar"})
 
 -- Others
+keymap("i", "'", "''<left>")
+keymap("i", '"', '""<left>')
+keymap("i", "(", "()<left>")
+keymap("i", "{", "{}<left>")
+keymap("i", "[", "[]<left>")
+
+keymap("i", "/*", "/**/<left><left>")
 keymap("n", "<C-s>", ":w<CR>", { desc = "Save File" })
 keymap("n", "<Tab>", ":Telescope marks theme=ivy<CR>", { desc = "Open telescope marks" })
 keymap("n", "<F1>", ":Ex<CR>", { desc = "Open Explorer" })

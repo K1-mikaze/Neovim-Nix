@@ -4,7 +4,6 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.scrolloff = 999
 vim.opt.sidescrolloff = 999
-vim.opt.wrap = false
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.termguicolors = true
