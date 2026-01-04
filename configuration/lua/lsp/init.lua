@@ -10,6 +10,7 @@ function M.setup()
 	require("lsp.java")
 	require("lsp.dart")
 	require("lsp.markdown")
+	require("lsp.css")
 	require("lsp.formatting")
 	require("lsp.linting")
 

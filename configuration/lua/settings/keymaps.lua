@@ -89,6 +89,7 @@ keymap("n", "<leader>gb", "<cmd>:Git blame<CR>", { desc = "Open Git Blames" })
 keymap("n", "<leader>dt", "<cmd>:DBUIToggle<CR>", { desc = "Toggle DBUI Sidebar"})
 
 -- Others
+keymap("i", "`", "``<left>")
 keymap("i", "'", "''<left>")
 keymap("i", '"', '""<left>')
 keymap("i", "(", "()<left>")
@@ -98,7 +99,7 @@ keymap("i", "[", "[]<left>")
 keymap("i", "/*", "/**/<left><left>")
 keymap("n", "<C-s>", ":w<CR>", { desc = "Save File" })
 keymap("n", "<Tab>", ":Telescope marks theme=ivy<CR>", { desc = "Open telescope marks" })
-keymap("n", "<F1>", ":Ex<CR>", { desc = "Open Explorer" })
+keymap("n", "<F1>", ":Vex!<CR>", { desc = "Open Explorer" })
 keymap(
 	"n",
 	"<leader>olae",
